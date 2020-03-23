@@ -1,15 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silo", "Silo\Silo.csproj", "{46B97A4C-71BB-415C-B14F-DC10529063C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Silo", "Silo\Silo.csproj", "{46B97A4C-71BB-415C-B14F-DC10529063C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{AC9C7956-EFF5-4571-A042-0E4CBC11C8EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Client\Client.csproj", "{AC9C7956-EFF5-4571-A042-0E4CBC11C8EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrainInterfaces", "GrainInterfaces\GrainInterfaces.csproj", "{F439B440-D738-43C1-9C15-6A793FC7C976}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrainInterfaces", "GrainInterfaces\GrainInterfaces.csproj", "{F439B440-D738-43C1-9C15-6A793FC7C976}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grains", "Grains\Grains.csproj", "{03817995-43ED-4B26-8745-C7D98E2D9B30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grains", "Grains\Grains.csproj", "{03817995-43ED-4B26-8745-C7D98E2D9B30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TasksConsoleApp", "ConsoleApp1\TasksConsoleApp.csproj", "{AFEE7DDD-72E1-4AA2-8818-D06B42B16301}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,9 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{46B97A4C-71BB-415C-B14F-DC10529063C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -72,5 +71,23 @@ Global
 		{03817995-43ED-4B26-8745-C7D98E2D9B30}.Release|x64.Build.0 = Release|Any CPU
 		{03817995-43ED-4B26-8745-C7D98E2D9B30}.Release|x86.ActiveCfg = Release|Any CPU
 		{03817995-43ED-4B26-8745-C7D98E2D9B30}.Release|x86.Build.0 = Release|Any CPU
+		{AFEE7DDD-72E1-4AA2-8818-D06B42B16301}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFEE7DDD-72E1-4AA2-8818-D06B42B16301}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFEE7DDD-72E1-4AA2-8818-D06B42B16301}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{AFEE7DDD-72E1-4AA2-8818-D06B42B16301}.Debug|x64.Build.0 = Debug|Any CPU
+		{AFEE7DDD-72E1-4AA2-8818-D06B42B16301}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AFEE7DDD-72E1-4AA2-8818-D06B42B16301}.Debug|x86.Build.0 = Debug|Any CPU
+		{AFEE7DDD-72E1-4AA2-8818-D06B42B16301}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFEE7DDD-72E1-4AA2-8818-D06B42B16301}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFEE7DDD-72E1-4AA2-8818-D06B42B16301}.Release|x64.ActiveCfg = Release|Any CPU
+		{AFEE7DDD-72E1-4AA2-8818-D06B42B16301}.Release|x64.Build.0 = Release|Any CPU
+		{AFEE7DDD-72E1-4AA2-8818-D06B42B16301}.Release|x86.ActiveCfg = Release|Any CPU
+		{AFEE7DDD-72E1-4AA2-8818-D06B42B16301}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B1E41CF1-DB0D-43C3-AE75-F6A009ECB545}
 	EndGlobalSection
 EndGlobal

@@ -2,6 +2,7 @@
 using Orleans;
 using Orleans.Configuration;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace OrleansBasics
@@ -59,6 +60,18 @@ namespace OrleansBasics
             var friend = client.GetGrain<IHello>(0);
             var response = await friend.SayHello("Good morning, HelloGrain!");
             Console.WriteLine("\n\n{0}\n\n", response);
+
+            var tasks = new List<Task>();
+
+
+            for(int i=0;i<100;i++)
+            {
+                var task = Task.Run(() => friend.AddCount());
+                tasks.Add(task);
+            }
+            Task.WaitAll(tasks.ToArray());
+
+            Console.WriteLine(await friend.GetCount());
         }
     }
 }
