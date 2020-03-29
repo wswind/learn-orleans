@@ -1,28 +1,31 @@
 ﻿using Microsoft.Extensions.Logging;
+using Orleans.Providers;
 using System.Threading.Tasks;
 
 namespace OrleansBasics
 {
-    public class HelloGrain : Orleans.Grain, IHello
+    [StorageProvider(ProviderName="DevStore")]
+    public class HelloGrain : Orleans.Grain<PersistentData>, IHello
     {
         private readonly ILogger logger;
-        private int _count;
+        
 
         public HelloGrain(ILogger<HelloGrain> logger)
         {
             this.logger = logger;
-            _count = 0;
+            
         }
 
-        public Task AddCount()
+        public async Task AddCount()
         {
-            _count++;
-            return Task.CompletedTask;
+            this.State.Count ++;
+            await this.WriteStateAsync();
+            
         }
 
         public Task<int> GetCount()
         {
-            return Task.FromResult(_count);
+            return Task.FromResult(this.State.Count);
         }
 
         Task<string> IHello.SayHello(string greeting)
