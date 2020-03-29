@@ -8,7 +8,18 @@ namespace OrleansBasics
     public class HelloGrain : Orleans.Grain<PersistentData>, IHello
     {
         private readonly ILogger logger;
-        
+
+        public override Task OnActivateAsync()
+        {
+            this.ReadStateAsync();
+            return base.OnActivateAsync();
+        }
+
+        public override Task OnDeactivateAsync()
+        {
+            this.WriteStateAsync();
+            return base.OnDeactivateAsync();
+        }
 
         public HelloGrain(ILogger<HelloGrain> logger)
         {
@@ -20,7 +31,6 @@ namespace OrleansBasics
         {
             this.State.Count ++;
             await this.WriteStateAsync();
-            
         }
 
         public Task<int> GetCount()
