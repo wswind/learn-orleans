@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace OrleansBasics
 {
-    [StorageProvider(ProviderName="DevStore")]
+    [StorageProvider(ProviderName= "OrleansStorage")]
     public class HelloGrain : Orleans.Grain<PersistentData>, IHello
     {
         private readonly ILogger logger;

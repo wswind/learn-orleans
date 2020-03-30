@@ -39,6 +39,12 @@ namespace OrleansBasics
             var builder = new SiloHostBuilder()
                 .UseLocalhostClustering()
                 .AddMemoryGrainStorage("DevStore")
+                .AddAdoNetGrainStorage("OrleansStorage", options =>
+                {
+                    options.Invariant = "System.Data.SqlClient";
+                    options.ConnectionString = "Server=.;Database=o3;Trusted_Connection=True;";
+                    options.UseJsonFormat = true;
+                })
                 .Configure<ClusterOptions>(options =>
                 {
                     options.ClusterId = "dev";
