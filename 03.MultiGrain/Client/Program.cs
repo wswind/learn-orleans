@@ -56,10 +56,11 @@ namespace OrleansBasics
 
         private static async Task DoClientWork(IClusterClient client)
         {
-            // example of calling grains from the initialized client
+           
             var client1 = client.GetGrain<IHello>(0);
             var client2 = client.GetGrain<IHello>(1);
 
+            //https://dotnet.github.io/orleans/Documentation/grains/grain_identity.html
             var id1 = client1.GetGrainIdentity().GetPrimaryKeyLong(out string keyExt);
             var id2 = client2.GetGrainIdentity().GetPrimaryKeyLong(out string keyExt2);
 
